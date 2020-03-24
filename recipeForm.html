@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <?php 
+            $title=$_REQUEST["title"];
+            if(strlen($title)>255)
+            echo "Title must be within 255 characters<br/>";
+            else
+            echo "Valid title<br/>";
+
+            $shortDesc=$_REQUEST["shortDescription"];
+            if(strlen($shortDesc)>255)
+            echo "Short desc must be within 255 characters<br/>";
+            else
+            echo "Valid shortDesc";
+
+            $ingredients=$_REQUEST["ingredients"];
+            if(strlen($ingredients)>255)
+            echo "<255 needed<br/>";
+            else
+            echo "Valid ingre<br/>";
+
+            $longDescription=$_REQUEST["longDescription"];
+            if(strlen($longDescription)>255)
+            echo "<255 needed<br/>";
+            else
+            echo "Valid longDescription<br/>"       
+        ?>
+</head>
+<body>
+    <form name="recipeWrite" action="./recipeFormCheck.php" method="POST">
+        <input type="text" name="title" value="" placeholder="Recipte title" required>
+        <input type="text" name="shortDescription" value="" placeholder="Short Description" required>
+        <br/>
+        <textarea name="ingredients" rows="10" cols="50" placeholder="Ingredients(like 1gm paneer, 2gm tofu)" required></textarea>
+        <textarea name="longDescription" rows="10" cols="10" placeholder="Your recipe" required></textarea>
+        <br/>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
