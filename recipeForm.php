@@ -39,6 +39,10 @@
             { $longDescription_error="<255 needed<br/>"; $flag=1;}
             else
             $longDescription_error="Valid longDescription<br/>";*/
+            if($_COOKIE["userName"]=="")
+            {
+                header('Location:loginForm.php');
+            }
             if(isset($_REQUEST["submit"]))
             {
                 include("./formValidation.php");
@@ -57,10 +61,11 @@
                     $shortDescription=mysqli_real_escape_string($con, $_REQUEST["shortDescription"]);
                     $longDescription_error=mysqli_real_escape_string($con, $_REQUEST["longDescription"]);
                     $ingredients=mysqli_real_escape_string($con, $_REQUEST["ingredients"]);
-    
-                    $sql="INSERT INTO recipes(title, shortDescription, longDescription, ingredients) VALUES('$title', '$shortDescription','$longDescription_error','$ingredients')";
+                    $userName522=mysqli_real_escape_string($con, $_COOKIE["userName"]);
+
+                    $sql="INSERT INTO recipes(title, shortDescription, longDescription, ingredients, userName522) VALUES('$title', '$shortDescription','$longDescription_error','$ingredients', '$userName522')";
                     mysqli_query($con, $sql);
-                    header('Location:index.html');
+                    header('Location:index.php');
                 } 
             }
            

@@ -7,6 +7,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1"></head>
     <body>
         <?php
+        if($_COOKIE["userName"]==null)
+        {
+            header('Location: loginForm.php');
+        }
             $con=mysqli_connect('localhost', 'shaun', 'test', 'VegansBlog');
             if($con){
                 echo "Connected";

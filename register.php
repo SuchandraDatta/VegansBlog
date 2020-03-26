@@ -28,8 +28,11 @@
 
                 $userName=mysqli_real_escape_string($con, $_REQUEST["userName"]);
                 $passWord522=mysqli_real_escape_string($con, $_REQUEST["passWord1"]);
+                
+                $x=password_hash($passWord522, PASSWORD_DEFAULT );
+                $x=mysqli_real_escape_string($con, $x);
 
-                $sql="INSERT INTO userAccounts(userName, passWord522) VALUES('$userName', '$passWord522')";
+                $sql="INSERT INTO userAccounts(userName, passWord522) VALUES('$userName', '$x')";
                 if(mysqli_query($con, $sql))
                 {
                     echo "Query done successfully";
@@ -43,7 +46,7 @@
     }
 ?>
 <body>
-    <form action="./loginForm.php">
+    <form action="./register.php" action="POST">
         <input type="text" name="userName" value="" placeholder="Username">
         <input type="password" name="passWord1" value="" placeholder="Password">
         <input type="password" name="passWord2" value="" placeholder="Reenter password">
