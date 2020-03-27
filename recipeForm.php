@@ -65,7 +65,7 @@
 
                     $sql="INSERT INTO recipes(title, shortDescription, longDescription, ingredients, userName522) VALUES('$title', '$shortDescription','$longDescription_error','$ingredients', '$userName522')";
                     mysqli_query($con, $sql);
-                    header('Location:index.php');
+                    header('Location:indexVegansBlog.php');
                 } 
             }
            

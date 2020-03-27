@@ -64,6 +64,10 @@
         </style>
     </head>
     <body>
+		<?php
+			$name=$_COOKIE["userName"]??"";
+			echo $name;
+		?>
         <div id="landing-page-half">
             <div id="heading">
                 <h1><br/>VEGAN'S BLOG</h1>
@@ -71,8 +75,13 @@
             </div>
             <div class="loginButtons" style="position: relative; top: 30vh;">
                 
-                <a href="./register.php">REGISTER</a>
-                <a href="./loginForm.php">LOGIN</a>
+                
+				<?php if($name!=""){ ?>
+					<a href="./logoutVB.php">LOGOUT</a>
+				<?php } else { ?>
+					<a href="./loginForm.php">LOGIN</a>
+					<a href="./register.php">REGISTER</a>
+				<?php } ?>
                 
             </div>
         </div>

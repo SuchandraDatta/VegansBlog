@@ -1,4 +1,4 @@
 <?php
     setcookie("userName", "");
-    header('Location: index.php');
+    header('Location: indexVegansBlog.php');
 ?>
