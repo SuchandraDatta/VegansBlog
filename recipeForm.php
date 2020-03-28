@@ -73,17 +73,93 @@
        
            
         ?>
+        <style>
+            body
+            {
+                background-image: url('recipeFormBackpic.jpg');
+                background-size: cover;
+            }
+            .formContainer
+            {
+                height: 140vh;
+                width: 50vw;
+                background-color: red;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 2%;
+                background: linear-gradient(to right, #8e2dec3d, #400ae1);
+                border-radius: 1em;
+                box-shadow: 0 0 20px 1px rgba(255,255,255,0.9);
+            }
+            input, textarea
+            {
+                position: relative;
+                margin-left: 12vw;
+                margin-top: 2%;
+                width: 20vw;
+                font-size: 18px;
+                border: none;
+                overflow: hidden;
+                
+            }
+            input[type=text]
+            {
+                border-radius: 2em;
+                text-align: center;
+                height: 3em;
+            }
+             
+            textarea
+            {
+                border-radius: 1em;
+                text-align: center;
+                height: 10em;
+            }
+            input[type=submit]
+            {
+                height: 3em;
+                border-radius: 2em;
+                position: relative;
+                margin-top: 10vh;
+                box-shadow: 0 0 25px 5px black;
+                background-color: transparent;
+                color: white;
+            }
+            input[type=submit]:hover
+            {
+                background: linear-gradient(to right, #8e2dec3d, #400ae1);
+                color: white;
+            }
+            @media screen and (max-width: 414px)
+            {
+                .formContainer
+                {
+                height: 130vh;
+                width: 70vw;
+                }
+                input, textarea
+                {
+                 
+                margin-left: 9vw;
+                margin-top: 3%;
+                width: 50vw;
+                }
+            }
+        </style>
+    <div class="formContainer">
     <form name="recipeWrite" action="recipeForm.php" method="POST">
         <input type="text" name="title" value="" placeholder="Recipte title" required>
-            <h1><?php echo htmlspecialchars($title_error)?></h1>
+            <h6 style="color: red;"><?php echo htmlspecialchars($title_error)?></h6>
         <input type="text" name="shortDescription" value="" placeholder="Short Description" required>
-        <h1><?php echo htmlspecialchars($shortDescription_error)?></h1>
+        <h6 style="color: red;"><?php echo htmlspecialchars($shortDescription_error)?></h6>
         <br/>
         <textarea name="ingredients" rows="10" cols="50" placeholder="Ingredients(like 1gm paneer, 2gm tofu)" required></textarea>
-        <h1><?php echo htmlspecialchars($ingredients_error)?></h1>
+        <h6 style="color: red;"><?php echo htmlspecialchars($ingredients_error)?></h6>
         <textarea name="longDescription" rows="10" cols="10" placeholder="Your recipe" required></textarea>
-        <br/><h1><?php echo htmlspecialchars($longDescription_error)?></h1>
+        <br/><h6 style="color: red;"><?php echo htmlspecialchars($longDescription_error)?></h6>
         <input type="submit" value="submit" name="submit">
     </form>
+    </div>
 </body>
 </html>

@@ -24,33 +24,85 @@
             $result=mysqli_query($con, $sql);
             $recip=mysqli_fetch_all($result, MYSQLI_ASSOC);
             echo $recip[0]["ingredients"]
+            /*
+            <h6>Ingredients: </h6>
+                             <ul>
+                                <?php foreach(explode(',', $content["ingredients"]) as $ing){?>
+                                        <?php if($ing != NULL){?>
+                                                 <li><?php echo $ing?></li>
+                                         <?php }?>
+                                <?php }?>
+                             </ul>
+             */
         ?>
         <style>
             .eachBox
             {
-                background-color: #277084;
-                height: 50vh; color: white; 
+                background-color:  #27547b00;
+                height: 50vh;  
                 text-align: center;
-            }
-            .eachBox ul 
-            {
-                list-style-type:none;
+                border-radius: 1em;
+                box-shadow: 0 0 20px 5px white;
+                color: white;
             }
             .topBand
             {
-                background-color: green;
+                background-color: #005180;
                 width: 100%;
                 height: 20%;
+                border-radius: 1em;
             }
             .recipeBody
             {
                 
                 text-align: center;
                 width: 100%;
-                background-color: #288886;
+                background-color: #0404049c;
                 position: relative;
                 top: 10%;
+                height: 30vh;
             }
+            body
+            {
+                background-image: url('browseRecipesBackpic.jpg');
+                background-size: cover;
+            }
+            .shtDesc
+            {
+                height: 15vh;
+                text-align: center;
+            }
+            .viewDetails, .deleteDetails, .editDetails
+            {
+                background-color: blue;
+                border-radius: 2em;
+                padding: 1vh;
+            }
+            .deleteDetails
+            { 
+                background-color: red;
+            }
+            .editDetails
+            {
+                margin-bottom: 2vh;
+                position: relative;
+            }
+            a:link, a:visited
+            {
+                color: white;
+            }
+            a:hover
+            {
+                text-decoration: none;
+            }
+            @media screen and (max-width: 360px)
+            {
+                .eachBox
+                {
+                    height: 50vh;  
+                    width: 90vw;
+                }
+            }   
         </style>
         <div class="container">
             <div class="row mt-5 justify-content-center">
@@ -61,17 +113,11 @@
                             <h6><br><?php echo htmlspecialchars($content["title"])?></h6>
                         </div>
                             <div class="recipeBody">
-                             <ul>
-                                <?php foreach(explode(',', $content["ingredients"]) as $ing){?>
-                                        <?php if($ing != NULL){?>
-                                                 <li><?php echo $ing?></li>
-                                         <?php }?>
-                                <?php }?>
-                             </ul>
-                             <p><?php echo $content["shortDescription"]?></p>
-                             <a style="color: white;" href="viewDetails.php?id=<?php echo $content["id"];?>">View details</a>
-                             <a style="color: red;" href="deleteDetails.php?id=<?php echo $content["id"];?>">Delete recipe</a>
-                             <a style="color: blue;" href="editDetailsForm.php?id=<?php echo $content["id"];?>">Edit recipe</a>
+                             
+                             <p class="shtDesc"><?php echo $content["shortDescription"]?></p>
+                             <a class="viewDetails" style="color: white;" href="viewDetails.php?id=<?php echo $content["id"];?>">View details</a>
+                             <a class="deleteDetails"   href="deleteDetails.php?id=<?php echo $content["id"];?>">Delete recipe</a><br/><br/>
+                             <a class="editDetails"  href="editDetailsForm.php?id=<?php echo $content["id"];?>">Edit recipe</a>
                             </div>
                     </div>
                 </div>

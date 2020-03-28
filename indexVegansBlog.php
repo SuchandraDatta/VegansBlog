@@ -61,6 +61,27 @@
                 padding: 3%;
                 box-shadow: 0 0 30px 5px rgba(0,0,0,0.3);
             }
+            @media screen and (max-width: 360px)
+            {
+                #landing-page-half
+                {
+                height: 100vh;
+                width: 100%;
+                }
+                #heading
+                {
+                height: 40%;
+                width: 80%;
+                }
+                .box1
+                {
+                height: 70vh;
+                }
+                .linkButton
+                {   
+                    font-size: 12px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -88,15 +109,15 @@
         <div class="container">
             <div class="row mt-5 justify-content-center">
                 <div class="col-md-6">
-                    <div class="ml-5 box1">
+                    <div class="m-5 box1">
                         <img src="./food2.jpg" alt="Browse recipes" height="100px" width="100%" class="img-fluid">
-                        <p>Browse through our selection of more than 10 recipes on varied categories, designed to satisfy your vegan cravings as well as satisfy your nutritional demands. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequatur rem in ullam repellat beatae voluptate voluptatem voluptatum repudiandae at dicta, iusto eligendi animi natus magnam aliquid magni ratione laudantium.</p>
+                        <p>Browse through our selection of more than 10 recipes on varied categories, designed to satisfy your vegan cravings as well as satisfy your nutritional demands.</p>
                         <div class="linkButton"><a href="./viewRecipes.php" >BROWSE RECIPES</a></div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="ml-5 box1" style="background-image: url('./food3.jpg'); background-size: cover; color: white; text-align: center; padding: 3%; position: relative;">
-                        <p style="position: relative; top: 30%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi harum dignissimos optio magnam deleniti ex architecto maiores et dolore nesciunt porro quam enim consequatur tenetur, nostrum ratione asperiores corrupti.</p>
+                    <div class="m-5 box1" style="background-image: url('./food3.jpg'); background-size: cover; color: white; text-align: center; padding: 3%; position: relative;">
+                        <p style="position: relative; top: 30%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi harum dignissimos optio magnam deleniti ex architecto maiores et</p>
                         <div class="linkButton" style="position: relative; top: 40%;"><a href="./recipeForm.php" >WRITE YOUR RECIPE</a></div>
                     </div>
                 </div>
