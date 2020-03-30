@@ -102,8 +102,50 @@
                     height: 50vh;  
                     width: 90vw;
                 }
-            }   
+            } 
+            /*header stuff*/
+            header
+            {
+                height: 10vh;
+                width: 100%;
+                background-image: url('./headerBackpic.gif')
+                
+            }
+            header ul
+            {
+                list-style-type: none;
+               
+            }
+            header ul li a
+            {
+                color: white;
+                font-weight: bolder;
+                float: left;
+                display: block;
+                margin: 3vh 5vh;
+                
+            }
+            header ul li a:hover
+            {
+                text-decoration: none;
+                color: black;
+            }
+            @media screen and (max-width: 414px)
+            {
+                header ul li a
+                {
+                     margin: 3vh 2vh;
+                     font-size: 13px;
+                }
+            }  
         </style>
+         <header>
+            <ul>
+                <li><a href="./indexVegansBlog.php">HOME</a></li>
+                <li><a href="./recipeForm.php">WRITE RECIPE</a></li>
+                <li><a href="./viewRecipes.php">BROWSE RECIPES</a></li>
+            </ul>
+        </header>
         <div class="container">
             <div class="row mt-5 justify-content-center">
                 <?php foreach($recip as $content){?>

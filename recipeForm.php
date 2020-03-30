@@ -146,7 +146,15 @@
                 width: 50vw;
                 }
             }
+            header
+            {
+                height: 10vh;
+                width: 100%;
+                background-image: url('./headerBackpic.gif')
+                
+            } 
         </style>
+          
     <div class="formContainer">
     <form name="recipeWrite" action="recipeForm.php" method="POST">
         <input type="text" name="title" value="" placeholder="Recipte title" required>
