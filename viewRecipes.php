@@ -13,11 +13,11 @@
         }
             $con=mysqli_connect('localhost', 'shaun', 'test', 'VegansBlog');
             if($con){
-                echo "Connected";
+               // echo "Connected";
             }
             else
             {
-                echo mysqli_connect_error();
+                //echo mysqli_connect_error();
             }
 
             $sql='SELECT * FROM recipes';
@@ -64,7 +64,7 @@
             }
             body
             {
-                background-image: url('browseRecipesBackpic.jpg');
+                background-image: url('browseRecipesBackpic2.jpg');
                 background-size: cover;
             }
             .shtDesc

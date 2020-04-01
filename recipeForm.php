@@ -11,7 +11,7 @@
         $shortDescription_error="";
         $longDescription_error="";
         $ingredients_error="";
-        echo "OVER HERE";
+        //echo "OVER HERE";
         $title="";
         /*$flag=0;
         if(isset($_REQUEST["submit"])){

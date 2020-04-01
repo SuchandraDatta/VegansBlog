@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +62,7 @@
                 padding: 3%;
                 box-shadow: 0 0 30px 5px rgba(0,0,0,0.3);
             }
-            @media screen and (max-width: 360px)
+            @media screen and (max-width: 414px)
             {
                 #landing-page-half
                 {
@@ -184,7 +184,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="m-5 box1" style="background-image: url('./food3.jpg'); background-size: cover; color: white; text-align: center; padding: 3%; position: relative;">
-                        <p style="position: relative; top: 30%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi harum dignissimos optio magnam deleniti ex architecto maiores et</p>
+                        <p style="position: relative; top: 30%;">Give free rein to your imagination and experiment with ingredients and spices to cook up new dishes and share your recipes.</p>
                         <div class="linkButton" style="position: relative; top: 40%;"><a href="./recipeForm.php" >WRITE RECIPE</a></div>
                     </div>
                 </div>
